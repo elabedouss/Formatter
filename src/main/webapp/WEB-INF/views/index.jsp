@@ -67,9 +67,7 @@
          	<hr class="uk-divider-icon">
             <h2 class="uk-heading-line uk-text-center uk-text-uppercase">Contact</h2>
             <hr class="uk-divider-icon">
-            <p class="uk-text-center">Over the years the JSON Formatter &amp; Validator has been immensely improved
-                through the
-                feedback and suggestions of its users. We encourage you to continue to pass along any new
+            <p class="uk-text-center">We encourage you to continue to pass along any new
                 recommendations, requests or bug reports.</p>
             <form method="POST" action="/contact">
                 <div class="uk-margin">
