@@ -15,6 +15,12 @@ import com.formatter.json.PrettyJson;
 import com.formatter.model.Contact;
 import com.formatter.services.MailService;
 
+/**
+ * <h3>Default Controller.</h3>
+ * 
+ * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
+ *
+ */
 @Controller
 public class DefaultController {
 
