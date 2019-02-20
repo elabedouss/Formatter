@@ -16,10 +16,10 @@
         <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
-                    <li class="uk-parent"><a href="#learn" uk-scroll>Learn</a></li>
-                    <li class="uk-parent"><a href="#changelog" uk-scroll>Changelog</a></li>
-                    <li class="uk-parent"><a href="#contact" uk-scroll>Contact</a></li>
-                    <li class="uk-parent" ><a href="#about" uk-scroll>About</a></li>
+                    <li class="uk-parent"><a href="#learn" uk-scroll><spring:message code="navbar.menu.learn"/></a></li>
+                    <li class="uk-parent"><a href="#changelog" uk-scroll><spring:message code="navbar.menu.changelog"/></a></li>
+                    <li class="uk-parent"><a href="#contact" uk-scroll><spring:message code="navbar.menu.contact"/></a></li>
+                    <li class="uk-parent" ><a href="#about" uk-scroll><spring:message code="navbar.menu.about"/></a></li>
                 </ul>
             </div>
         </nav>
@@ -29,13 +29,13 @@
         <form method="POST" action="/pretty" name="formFormatting">
         	 <div class="uk-position-relative uk-margin-medium">
                 <ul uk-tab class="uk-tab" uk-switcher>
-                     <li aria-expanded="true" class="uk-active" uk-tooltip="Implemented"><a href="#">JSON</a></li>
-                     <li uk-tooltip="In progress"><a href="#" >XML</a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" >HTML</a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" >JAVASCRIPT</a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" >CSS</a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" >SQL</a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" >JAVA</a></li>
+                     <li aria-expanded="true" class="uk-active" uk-tooltip="Implemented"><a href="#"><spring:message code="formatting.header.tooltip.json"/></a></li>
+                     <li uk-tooltip="In progress"><a href="#" ><spring:message code="formatting.header.tooltip.xml"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.html"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.javascript"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.css"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.sql"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.java"/></a></li>
                 </ul>
                 <ul class="uk-switcher uk-margin">
                     	<tags:json-section />
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="uk-margin">
-                <button type="submit" class="uk-button uk-button-primary uk-width-1-3 uk-align-center" onclick="return IsJsonString();">Process</button>
+                <button type="submit" class="uk-button uk-button-primary uk-width-1-3 uk-align-center" onclick="return IsJsonString();"><spring:message code="formatting.form.button.process"/></button>
             </div>
         </form>
         </div>
@@ -65,23 +65,22 @@
     <section id="contact" class="uk-section uk-section-muted uk-section-xsmall" uk-scrollspy="cls:uk-animation-slide-right-medium">
         <div class="uk-container uk-container-small">
          	<hr class="uk-divider-icon">
-            <h2 class="uk-heading-line uk-text-center uk-text-uppercase">Contact</h2>
+            <h2 class="uk-heading-line uk-text-center uk-text-uppercase"><spring:message code="contact.section.name"/></h2>
             <hr class="uk-divider-icon">
-            <p class="uk-text-center">We encourage you to continue to pass along any new
-                recommendations, requests or bug reports.</p>
+            <p class="uk-text-center"><spring:message code="contact.section.text"/></p>
             <form method="POST" action="/contact">
                 <div class="uk-margin">
-                    <input class="uk-input" type="text" name="name" placeholder="Name">
+                    <input class="uk-input" type="text" name="name" placeholder="<spring:message code="contact.form.input.name"/>">
                 </div>
                 <div class="uk-margin">
-                    <input class="uk-input" type="email" name="email" placeholder="Email Address">
+                    <input class="uk-input" type="email" name="email" placeholder="<spring:message code="contact.form.input.email"/>">
                 </div>
                 <div class="uk-margin">
-                    <textarea placeholder="Message" class="uk-textarea" name="message" rows="6"></textarea>
+                    <textarea class="uk-textarea" name="message" placeholder="<spring:message code="contact.form.input.message"/>" rows="6"></textarea>
                 </div>
                 <div class="uk-margin">
                     <button type="submit" class="uk-button uk-button-primary uk-width-1-3 uk-align-center" id="send"
-                        data-loading-text="<i class='fa fa-cog fa-spin'></i>">Send</button>
+                        data-loading-text="<i class='fa fa-cog fa-spin'></i>"><spring:message code="contact.form.button.send"/></button>
                 </div>
             </form>
         </div>
@@ -89,15 +88,9 @@
     <section id="about" class="uk-section uk-section-muted uk-section-xsmall" uk-scrollspy="cls:uk-animation-slide-left-medium">
         <div class="uk-container uk-container-small">
        		<hr class="uk-divider-icon">
-            <h2 class="uk-heading-line uk-text-center uk-text-uppercase">About</h2>
+            <h2 class="uk-heading-line uk-text-center uk-text-uppercase"><spring:message code="about.section.name"/></h2>
             <hr class="uk-divider-icon">
-            <p class="uk-text-center">The JSON Formatter was created to help with debugging. As JSON data is often
-                output without line breaks to save space, it is extremely difficult to actually read and make sense of
-                it. This little tool hoped to solve the problem by formatting the JSON data so that it is easy to read
-                and debug by human beings.</p>
-            <p class="uk-text-center">Shortly after it was created, JSON validation was added following the description
-                set out by Douglas Crockford of json.org in RFC 4627. It has since been expanded to also validate both
-                current competing JSON standards RFC 7159 and ECMA-404.</p>
+            <p class="uk-text-center"><spring:message code="about.section.text"/></p>
         </div>
     </section>
     <spring:url value="/resources/scripts/jquery-3.3.1.min.js" var="jqueyJs" />
