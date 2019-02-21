@@ -4,7 +4,7 @@
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <html lang="en">
 <head>
-    <title>Formatter</title>
+    <title><spring:message code="website.title"/></title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
