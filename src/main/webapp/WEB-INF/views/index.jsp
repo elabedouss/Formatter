@@ -30,8 +30,8 @@
         	 <div class="uk-position-relative uk-margin-medium">
                 <ul uk-tab class="uk-tab" uk-switcher>
                      <li aria-expanded="true" class="uk-active" uk-tooltip="Implemented"><a  href="#" id="jsonAction" value="/prettyJson" onclick="SwitchFormActionToJson()"><spring:message code="formatting.header.tooltip.json"/></a></li>
-                     <li uk-tooltip="In progress"><a href="#" id="xmlAction" value="/prettyXml" onclick="SwitchFormActionToXml()"><spring:message code="formatting.header.tooltip.xml"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" id="htmlAction" value="/prettyHtml" onclick="SwitchFormActionToHtml()"><spring:message code="formatting.header.tooltip.html"/></a></li>
+                     <li uk-tooltip="Implemented"><a href="#" id="xmlAction" value="/prettyXml" onclick="SwitchFormActionToXml()"><spring:message code="formatting.header.tooltip.xml"/></a></li>
+                      <li uk-tooltip="In progress"><a href="#" id="htmlAction" value="/prettyHtml" onclick="SwitchFormActionToHtml()"><spring:message code="formatting.header.tooltip.html"/></a></li>
                       <li uk-tooltip="Not allowed"><a href="#" id="javascriptAction" value="/prettyJavascript" onclick="SwitchFormActionToJavascript()"><spring:message code="formatting.header.tooltip.javascript"/></a></li>
                       <li uk-tooltip="Not allowed"><a href="#" id="cssAction" value="/prettyCss" onclick="SwitchFormActionToCss()"><spring:message code="formatting.header.tooltip.css"/></a></li>
                       <li uk-tooltip="Not allowed"><a href="#" id="sqlAction" value="/prettySql" onclick="SwitchFormActionToSql()"><spring:message code="formatting.header.tooltip.sql"/></a></li>
