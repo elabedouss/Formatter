@@ -16,6 +16,13 @@ import com.formatter.model.Contact;
 import com.formatter.services.MailService;
 import com.formatter.xml.PrettyXml;
 
+/**
+ * <h3>Default Controller.</h3>
+ * 
+ * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
+ *
+ */
+
 @Controller
 public class DefaultController {
 

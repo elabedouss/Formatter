@@ -1,5 +1,12 @@
 package com.formatter.model;
 
+/**
+ * <p>Settings used to build Formatter application.</p>
+ * 
+ * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
+ *
+ */
+
 public class Settings {
 	private String mailHost;
 

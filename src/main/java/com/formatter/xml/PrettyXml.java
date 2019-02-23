@@ -11,7 +11,7 @@ import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.InputSource;
 
 /**
- * this class created to pretty XML response
+ * <h3>his class created to pretty XML response.</h3>
  * 
  * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
  *

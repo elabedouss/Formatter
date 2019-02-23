@@ -22,6 +22,13 @@ import com.formatter.model.MailException;
 import com.formatter.model.Contact;
 import com.formatter.model.Settings;
 
+/**
+ * <p>The mail service handles sending email messages .</p>
+ * 
+ * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
+ *
+ */
+
 @Service
 public class MailService {
 

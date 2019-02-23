@@ -6,7 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 /**
- * this class created to pretty JSON response
+ * <h3>this class created to pretty JSON response</h3>
  * 
  * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
  *
