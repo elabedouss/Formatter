@@ -26,16 +26,16 @@
     </div>
     <section class="uk-section uk-section-muted uk-section-xsmall" uk-scrollspy="cls:uk-animation-slide-right-medium">
         <div class="uk-container uk-container-small">
-        <form method="POST" action="/pretty" name="formFormatting">
+        <form method="POST" action="/prettyJson" name="formFormatting">
         	 <div class="uk-position-relative uk-margin-medium">
                 <ul uk-tab class="uk-tab" uk-switcher>
-                     <li aria-expanded="true" class="uk-active" uk-tooltip="Implemented"><a href="#"><spring:message code="formatting.header.tooltip.json"/></a></li>
-                     <li uk-tooltip="In progress"><a href="#" ><spring:message code="formatting.header.tooltip.xml"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.html"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.javascript"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.css"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.sql"/></a></li>
-                      <li uk-tooltip="Not allowed"><a href="#" ><spring:message code="formatting.header.tooltip.java"/></a></li>
+                     <li aria-expanded="true" class="uk-active" uk-tooltip="Implemented"><a  href="#" id="jsonAction" value="/prettyJson" onclick="SwitchFormActionToJson()"><spring:message code="formatting.header.tooltip.json"/></a></li>
+                     <li uk-tooltip="In progress"><a href="#" id="xmlAction" value="/prettyXml" onclick="SwitchFormActionToXml()"><spring:message code="formatting.header.tooltip.xml"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" id="htmlAction" value="/prettyHtml" onclick="SwitchFormActionToHtml()"><spring:message code="formatting.header.tooltip.html"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" id="javascriptAction" value="/prettyJavascript" onclick="SwitchFormActionToJavascript()"><spring:message code="formatting.header.tooltip.javascript"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" id="cssAction" value="/prettyCss" onclick="SwitchFormActionToCss()"><spring:message code="formatting.header.tooltip.css"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" id="sqlAction" value="/prettySql" onclick="SwitchFormActionToSql()"><spring:message code="formatting.header.tooltip.sql"/></a></li>
+                      <li uk-tooltip="Not allowed"><a href="#" id="javaAction" value="/prettyJava" onclick="SwitchFormActionToJava()"><spring:message code="formatting.header.tooltip.java"/></a></li>
                 </ul>
                 <ul class="uk-switcher uk-margin">
                     	<tags:json-section />
@@ -56,9 +56,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="uk-margin">
-                <button type="submit" class="uk-button uk-button-primary uk-width-1-3 uk-align-center" onclick="return IsJsonString();"><spring:message code="formatting.form.button.process"/></button>
-            </div>
         </form>
         </div>
     </section>
@@ -70,13 +67,13 @@
             <p class="uk-text-center"><spring:message code="contact.section.text"/></p>
             <form method="POST" action="/contact">
                 <div class="uk-margin">
-                    <input class="uk-input" type="text" name="name" placeholder="<spring:message code="contact.form.input.name"/>">
+                    <input class="uk-input" type="text" name="contactName" placeholder="<spring:message code="contact.form.input.name"/>">
                 </div>
                 <div class="uk-margin">
-                    <input class="uk-input" type="email" name="email" placeholder="<spring:message code="contact.form.input.email"/>">
+                    <input class="uk-input" type="email" name="contactEmail" placeholder="<spring:message code="contact.form.input.email"/>">
                 </div>
                 <div class="uk-margin">
-                    <textarea class="uk-textarea" name="message" placeholder="<spring:message code="contact.form.input.message"/>" rows="6"></textarea>
+                    <textarea class="uk-textarea" name="contactMessage" placeholder="<spring:message code="contact.form.input.message"/>" rows="6"></textarea>
                 </div>
                 <div class="uk-margin">
                     <button type="submit" class="uk-button uk-button-primary uk-width-1-3 uk-align-center" id="send"

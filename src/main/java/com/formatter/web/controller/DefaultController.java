@@ -14,13 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.formatter.json.PrettyJson;
 import com.formatter.model.Contact;
 import com.formatter.services.MailService;
+import com.formatter.xml.PrettyXml;
 
-/**
- * <h3>Default Controller.</h3>
- * 
- * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
- *
- */
 @Controller
 public class DefaultController {
 
@@ -38,8 +33,8 @@ public class DefaultController {
 		return model;
 	}
 
-	@PostMapping(value = "/pretty")
-	public ModelAndView pretty(@RequestParam(value = "jsonText", required = true) String jsonText) {
+	@PostMapping(value = "/prettyJson")
+	public ModelAndView prettyJson(@RequestParam(value = "jsonText", required = true) String jsonText) {
 
 		String jsonResult = "";
 		ModelAndView model = new ModelAndView();
@@ -65,10 +60,87 @@ public class DefaultController {
 		return model;
 	}
 
+	@PostMapping(value = "/prettyXml")
+	public ModelAndView prettyXml(@RequestParam(value = "xmlText", required = true) String xmlText) {
+
+		String xmlResult = "";
+		ModelAndView model = new ModelAndView();
+
+		LOGGER.info("Original XML:\n" + xmlText);
+
+		if (!xmlText.isEmpty()) {
+			try {
+				xmlResult = PrettyXml.toPrettyFormat(xmlText);
+				LOGGER.info("Formatted XML:\n" + xmlResult);
+				model.setViewName(INDEX);
+				model.addObject("xmlResult", xmlResult);
+			} catch (Exception e) {
+				LOGGER.error(e.getMessage(), e);
+				model.setViewName(INDEX);
+				return model;
+			}
+		} else {
+			LOGGER.error("Text is Empty");
+			return model;
+		}
+
+		return model;
+	}
+
+	@PostMapping(value = "/prettyHtml")
+	public ModelAndView prettyHtml(@RequestParam(value = "htmlText", required = true) String htmlText) {
+		String htmlResult = "";
+		ModelAndView model = new ModelAndView();
+
+		// TO DO
+
+		return model;
+	}
+
+	@PostMapping(value = "/prettyJavascript")
+	public ModelAndView prettyJavascript(@RequestParam(value = "javascriptText", required = true) String javascriptText) {
+		String javascriptResult = "";	
+		ModelAndView model = new ModelAndView();
+
+		// TO DO
+
+		return model;
+	}
+
+	@PostMapping(value = "/prettyCss")
+	public ModelAndView prettyCss(@RequestParam(value = "cssText", required = true) String cssText) {
+		String cssResult = "";
+		ModelAndView model = new ModelAndView();
+
+		// TO DO
+
+		return model;
+	}
+
+	@PostMapping(value = "/prettySql")
+	public ModelAndView prettySql(@RequestParam(value = "sqlText", required = true) String sqlText) {
+		String sqlResult = "";
+		ModelAndView model = new ModelAndView();
+
+		// TO DO
+
+		return model;
+	}
+
+	@PostMapping(value = "/prettyJava")
+	public ModelAndView prettyJava(@RequestParam(value = "javaText", required = true) String javaText) {
+		String javaResult = "";
+		ModelAndView model = new ModelAndView();
+
+		// TO DO
+
+		return model;
+	}
+
 	@PostMapping(value = "/contact")
-	public String contact(@RequestParam(value = "name", required = true) String name,
-			@RequestParam(value = "email", required = true) String email,
-			@RequestParam(value = "message", required = true) String message) {
+	public String contact(@RequestParam(value = "contactName", required = true) String name,
+			@RequestParam(value = "contactEmail", required = true) String email,
+			@RequestParam(value = "contactMessage", required = true) String message) {
 
 		Contact contact = new Contact();
 		contact.setName(name);

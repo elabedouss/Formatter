@@ -1,12 +1,5 @@
 package com.formatter.model;
 
-/**
- * <p>Simple class to keep all contact information.</p>
- * 
- * @author <a href="mailto:elabedouss@gmail.com">Oussama El Abed</a>
- *
- */
-
 public class Contact {
 
 	private String name;
